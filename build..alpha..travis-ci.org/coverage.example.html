@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!doctype html>
+<html lang="en">
+<head>
     <title>Code coverage report for node-npmtest-gulp-sourcemaps/gulp-sourcemaps/src/init/index.internals.js</title>
     <meta charset="utf-8">
     <style>
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-sourcemaps/gulp-sourcemaps/src/init/</a> » index.internals.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-sourcemaps/gulp-sourcemaps/src/init/</a> &#187; index.internals.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -467,123 +469,122 @@ var fs = require('graceful-fs');
 var path = require('path');
 var unixStylePath = utils.unixStylePath;
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function(options, file, fileContent) {</span>
+module.exports = <span class="fstat-no" title="function not covered" >function(options, file, fileContent) {</span>
 &nbsp;
-<span class="fstat-no" title="function not covered">  function loadMaps() {</span>
+<span class="fstat-no" title="function not covered" >  function loadMaps() {</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var sources = {</span>
+<span class="cstat-no" title="statement not covered" >    var sources = {</span>
       path: '',
       map: null,
       content: fileContent,
       preExistingComment: null
     };
 &nbsp;
-<span class="cstat-no" title="statement not covered">    _getInlineSources(sources);</span>
-<span class="cstat-no" title="statement not covered">    if (!sources.map) // ahh not inline, so try file</span>
-<span class="cstat-no" title="statement not covered">      _getFileSources(sources);</span>
+<span class="cstat-no" title="statement not covered" >    _getInlineSources(sources);</span>
+<span class="cstat-no" title="statement not covered" >    if (!sources.map) // ahh not inline, so try file</span>
+<span class="cstat-no" title="statement not covered" >      _getFileSources(sources);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    _fixSources(sources);</span>
+<span class="cstat-no" title="statement not covered" >    _fixSources(sources);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    return sources;</span>
+<span class="cstat-no" title="statement not covered" >    return sources;</span>
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function _fixSources(sources) {</span>
-<span class="cstat-no" title="statement not covered">    var debug = rootDebug.spawn('init:internals:loadMaps:_fixSources');</span>
+<span class="fstat-no" title="function not covered" >  function _fixSources(sources) {</span>
+<span class="cstat-no" title="statement not covered" >    var debug = rootDebug.spawn('init:internals:loadMaps:_fixSources');</span>
 &nbsp;
     // fix source paths and sourceContent for imported source map
-<span class="cstat-no" title="statement not covered">    if (sources.map) {</span>
-<span class="cstat-no" title="statement not covered">      sources.map.sourcesContent = sources.map.sourcesContent || [];</span>
-<span class="cstat-no" title="statement not covered">      sources.map.sources.forEach(<span class="fstat-no" title="function not covered">function(source, i) {</span></span>
-<span class="cstat-no" title="statement not covered">        if (source.match(urlRegex)) {</span>
-<span class="cstat-no" title="statement not covered">          sources.map.sourcesContent[i] = sources.map.sourcesContent[i] || null;</span>
-<span class="cstat-no" title="statement not covered">          return;</span>
+<span class="cstat-no" title="statement not covered" >    if (sources.map) {</span>
+<span class="cstat-no" title="statement not covered" >      sources.map.sourcesContent = sources.map.sourcesContent || [];</span>
+<span class="cstat-no" title="statement not covered" >      sources.map.sources.forEach(<span class="fstat-no" title="function not covered" >function(source, i) {</span></span>
+<span class="cstat-no" title="statement not covered" >        if (source.match(urlRegex)) {</span>
+<span class="cstat-no" title="statement not covered" >          sources.map.sourcesContent[i] = sources.map.sourcesContent[i] || null;</span>
+<span class="cstat-no" title="statement not covered" >          return;</span>
         }
-<span class="cstat-no" title="statement not covered">        var absPath = path.resolve(sources.path, source);</span>
-<span class="cstat-no" title="statement not covered">        sources.map.sources[i] = unixStylePath(path.relative(file.base, absPath));</span>
+<span class="cstat-no" title="statement not covered" >        var absPath = path.resolve(sources.path, source);</span>
+<span class="cstat-no" title="statement not covered" >        sources.map.sources[i] = unixStylePath(path.relative(file.base, absPath));</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">        if (!sources.map.sourcesContent[i]) {</span>
-<span class="cstat-no" title="statement not covered">          var sourceContent = null;</span>
-<span class="cstat-no" title="statement not covered">          if (sources.map.sourceRoot) {</span>
-<span class="cstat-no" title="statement not covered">            if (sources.map.sourceRoot.match(urlRegex)) {</span>
-<span class="cstat-no" title="statement not covered">              sources.map.sourcesContent[i] = null;</span>
-<span class="cstat-no" title="statement not covered">              return;</span>
+<span class="cstat-no" title="statement not covered" >        if (!sources.map.sourcesContent[i]) {</span>
+<span class="cstat-no" title="statement not covered" >          var sourceContent = null;</span>
+<span class="cstat-no" title="statement not covered" >          if (sources.map.sourceRoot) {</span>
+<span class="cstat-no" title="statement not covered" >            if (sources.map.sourceRoot.match(urlRegex)) {</span>
+<span class="cstat-no" title="statement not covered" >              sources.map.sourcesContent[i] = null;</span>
+<span class="cstat-no" title="statement not covered" >              return;</span>
             }
-<span class="cstat-no" title="statement not covered">            absPath = path.resolve(sources.path, sources.map.sourceRoot, source);</span>
+<span class="cstat-no" title="statement not covered" >            absPath = path.resolve(sources.path, sources.map.sourceRoot, source);</span>
           }
 &nbsp;
           // if current file: use content
-<span class="cstat-no" title="statement not covered">          if (absPath === file.path) {</span>
-<span class="cstat-no" title="statement not covered">            sourceContent = sources.content;</span>
+<span class="cstat-no" title="statement not covered" >          if (absPath === file.path) {</span>
+<span class="cstat-no" title="statement not covered" >            sourceContent = sources.content;</span>
           } else { //attempt load content from file
-<span class="cstat-no" title="statement not covered">            try {</span>
-<span class="cstat-no" title="statement not covered">              debug(<span class="fstat-no" title="function not covered">function() {</span> <span class="cstat-no" title="statement not covered">return 'No source content for "' + source + '". Loading from file.'; </span>});</span>
-<span class="cstat-no" title="statement not covered">              sourceContent = stripBom(fs.readFileSync(absPath, 'utf8'));</span>
+<span class="cstat-no" title="statement not covered" >            try {</span>
+<span class="cstat-no" title="statement not covered" >              debug(<span class="fstat-no" title="function not covered" >function() {</span> <span class="cstat-no" title="statement not covered" >return 'No source content for "' + source + '". Loading from file.'; </span>});</span>
+<span class="cstat-no" title="statement not covered" >              sourceContent = stripBom(fs.readFileSync(absPath, 'utf8'));</span>
             } catch (e) {
-<span class="cstat-no" title="statement not covered">              debug(<span class="fstat-no" title="function not covered">function() {</span> <span class="cstat-no" title="statement not covered">return 'warn: source file not found: ' + absPath; </span>});</span>
+<span class="cstat-no" title="statement not covered" >              debug(<span class="fstat-no" title="function not covered" >function() {</span> <span class="cstat-no" title="statement not covered" >return 'warn: source file not found: ' + absPath; </span>});</span>
             }
           }
-<span class="cstat-no" title="statement not covered">          sources.map.sourcesContent[i] = sourceContent;</span>
+<span class="cstat-no" title="statement not covered" >          sources.map.sourcesContent[i] = sourceContent;</span>
         }
 &nbsp;
       });
       // remove source map comment from source
-<span class="cstat-no" title="statement not covered">      file.contents = new Buffer(sources.content, 'utf8');</span>
+<span class="cstat-no" title="statement not covered" >      file.contents = new Buffer(sources.content, 'utf8');</span>
     }
 &nbsp;
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function _getInlineSources(sources) {</span>
-<span class="cstat-no" title="statement not covered">    var debug = rootDebug.spawn('init:internals:loadMaps:_getInlineSources');</span>
+<span class="fstat-no" title="function not covered" >  function _getInlineSources(sources) {</span>
+<span class="cstat-no" title="statement not covered" >    var debug = rootDebug.spawn('init:internals:loadMaps:_getInlineSources');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sources.preExistingComment = utils.getInlinePreExisting(sources.content);</span>
+<span class="cstat-no" title="statement not covered" >    sources.preExistingComment = utils.getInlinePreExisting(sources.content);</span>
     // Try to read inline source map
-<span class="cstat-no" title="statement not covered">    sources.map = convert.fromSource(sources.content, options.largeFile);</span>
+<span class="cstat-no" title="statement not covered" >    sources.map = convert.fromSource(sources.content, options.largeFile);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    if (!sources.map)</span>
-<span class="cstat-no" title="statement not covered">      return sources;</span>
+<span class="cstat-no" title="statement not covered" >    if (!sources.map)</span>
+<span class="cstat-no" title="statement not covered" >      return sources;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    sources.map = sources.map.toObject();</span>
+<span class="cstat-no" title="statement not covered" >    sources.map = sources.map.toObject();</span>
     // sources in map are relative to the source file
-<span class="cstat-no" title="statement not covered">    sources.path = path.dirname(file.path);</span>
-<span class="cstat-no" title="statement not covered">    if (!options.largeFile) {</span>
-<span class="cstat-no" title="statement not covered">      debug('comment REMOVED');</span>
-<span class="cstat-no" title="statement not covered">      sources.content = convert.removeComments(sources.content);</span>
+<span class="cstat-no" title="statement not covered" >    sources.path = path.dirname(file.path);</span>
+<span class="cstat-no" title="statement not covered" >    if (!options.largeFile) {</span>
+<span class="cstat-no" title="statement not covered" >      debug('comment REMOVED');</span>
+<span class="cstat-no" title="statement not covered" >      sources.content = convert.removeComments(sources.content);</span>
     }
   }
 &nbsp;
-<span class="fstat-no" title="function not covered">  function _getFileSources(sources) {</span>
+<span class="fstat-no" title="function not covered" >  function _getFileSources(sources) {</span>
     // look for source map comment referencing a source map file
-<span class="cstat-no" title="statement not covered">    var mapComment = convert.mapFileCommentRegex.exec(sources.content);</span>
+<span class="cstat-no" title="statement not covered" >    var mapComment = convert.mapFileCommentRegex.exec(sources.content);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var mapFile;</span>
-<span class="cstat-no" title="statement not covered">    if (mapComment) {</span>
-<span class="cstat-no" title="statement not covered">      sources.preExistingComment = mapComment[1] || mapComment[2];</span>
-<span class="cstat-no" title="statement not covered">      mapFile = path.resolve(path.dirname(file.path), sources.preExistingComment);</span>
-<span class="cstat-no" title="statement not covered">      sources.content = convert.removeMapFileComments(sources.content);</span>
+<span class="cstat-no" title="statement not covered" >    var mapFile;</span>
+<span class="cstat-no" title="statement not covered" >    if (mapComment) {</span>
+<span class="cstat-no" title="statement not covered" >      sources.preExistingComment = mapComment[1] || mapComment[2];</span>
+<span class="cstat-no" title="statement not covered" >      mapFile = path.resolve(path.dirname(file.path), sources.preExistingComment);</span>
+<span class="cstat-no" title="statement not covered" >      sources.content = convert.removeMapFileComments(sources.content);</span>
       // if no comment try map file with same name as source file
     } else {
-<span class="cstat-no" title="statement not covered">      mapFile = file.path + '.map';</span>
+<span class="cstat-no" title="statement not covered" >      mapFile = file.path + '.map';</span>
     }
 &nbsp;
     // sources in external map are relative to map file
-<span class="cstat-no" title="statement not covered">    sources.path = path.dirname(mapFile);</span>
+<span class="cstat-no" title="statement not covered" >    sources.path = path.dirname(mapFile);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">    try {</span>
-<span class="cstat-no" title="statement not covered">      sources.map = JSON.parse(stripBom(fs.readFileSync(mapFile, 'utf8')));</span>
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      sources.map = JSON.parse(stripBom(fs.readFileSync(mapFile, 'utf8')));</span>
     } catch (e) {} //should we really swallow this error?
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return {</span>
+<span class="cstat-no" title="statement not covered" >  return {</span>
     loadMaps: loadMaps
   };
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 05:17:16 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 21:37:17 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
