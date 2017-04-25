@@ -5,7 +5,7 @@
 <tspan x="10" y="42"></tspan>
 <tspan x="10" y="58">node_modules</tspan>
 <tspan x="10" y="74">└─┬ gulp-sourcemaps@2.6.0 </tspan>
-<tspan x="10" y="90">  ├─┬ @gulp-sourcemaps/identity-map@1.0.0 </tspan>
+<tspan x="10" y="90">  ├─┬ @gulp-sourcemaps/identity-map@1.0.1 </tspan>
 <tspan x="10" y="106">  │ ├── acorn@5.0.3 </tspan>
 <tspan x="10" y="122">  │ └─┬ normalize-path@2.1.1 </tspan>
 <tspan x="10" y="138">  │   └── remove-trailing-separator@1.0.1 </tspan>
@@ -22,8 +22,8 @@
 <tspan x="10" y="314">  │ │ └── source-map-url@0.3.0 </tspan>
 <tspan x="10" y="330">  │ └── urix@0.1.0 </tspan>
 <tspan x="10" y="346">  ├─┬ debug-fabulous@0.1.0 </tspan>
-<tspan x="10" y="362">  │ ├─┬ debug@2.6.3 </tspan>
-<tspan x="10" y="378">  │ │ └── ms@0.7.2 </tspan>
+<tspan x="10" y="362">  │ ├─┬ debug@2.6.4 </tspan>
+<tspan x="10" y="378">  │ │ └── ms@0.7.3 </tspan>
 <tspan x="10" y="394">  │ └── object-assign@4.1.0 </tspan>
 <tspan x="10" y="410">  ├── detect-newline@2.1.0 </tspan>
 <tspan x="10" y="426">  ├── graceful-fs@4.1.11 </tspan>
