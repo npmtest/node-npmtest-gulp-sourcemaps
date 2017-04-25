@@ -1,6 +1,6 @@
 # npmtest-gulp-sourcemaps
 
-#### test coverage for  [gulp-sourcemaps (v2.6.0)](http://github.com/gulp-sourcemaps/gulp-sourcemaps)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-sourcemaps.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-sourcemaps) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-sourcemaps.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-sourcemaps)
+#### basic test coverage for  [gulp-sourcemaps (v2.6.0)](http://github.com/gulp-sourcemaps/gulp-sourcemaps)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-sourcemaps.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-sourcemaps) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-sourcemaps.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-sourcemaps)
 
 #### Source map support for Gulp.js
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-sourcemaps/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-sourcemaps/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-sourcemaps/build/coverage.html/index.html)
 
@@ -123,7 +123,8 @@
         "test": "npm run lint && faucet test/*.js $@",
         "test:int": "rm -rf ./tmp && tape ./test/integration.js"
     },
-    "version": "2.6.0"
+    "version": "2.6.0",
+    "bin": {}
 }
 ```
 
